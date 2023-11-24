@@ -1,7 +1,9 @@
-import Home from "./Home.js";
-import Search from "./Search.js";
+import Home from "./Home";
+import Search from "./Search";
+import CourseListing from "./Course/CourseListing";
 
 export {
     Home,
-    Search
+    Search,
+    CourseListing
 }

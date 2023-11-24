@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 // import * as Font from 'expo-font';
-import { View, Text, ImageBackground, Image, ScrollView, _View, FlatList, TextInput, TouchableOpacity } from 'react-native';
-import { Shadow } from "react-native-shadow-2";
+import { View, Text, ImageBackground, Image, ScrollView, _View, FlatList, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
-import { IconButton, TextButton, LineDivier, HorizontalCourseCard, CategoryCard, VerticalCourseCard } from "../components";
+import { IconButton, TextButton, LineDivider, HorizontalCourseCard, CategoryCard, CourseListingView } from "../components";
 import { COLORS, FONTS, SIZES, icons, images, dummyData } from '../constants';
 // import useFonts from './hooks/useFonts.js';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
-
-
-SplashScreen.preventAutoHideAsync();
 
 const Section = ({containerStyle, title, onPress, children}) => {
 	return (
@@ -57,31 +49,7 @@ const Section = ({containerStyle, title, onPress, children}) => {
 
 const Home = () => {
 
-	const [fontsLoaded, fontError] = useFonts({
-		'Roboto-Bold': require('../assets/fonts/Roboto-Bold.ttf'),
-		'Roboto-Regular': require('../assets/fonts/Roboto-Regular.ttf'),
-	  });
-	
-	const onLayoutRootView = async () => {
-		if (fontsLoaded || fontError) {
-			await SplashScreen.hideAsync();
-		}
-	};
-
 	const navigation = useNavigation();
-	
-	useEffect(() => {
-		onLayoutRootView();
-	}, [fontsLoaded, fontError]);
-
-	if (fontError) {
-		console.error('Error loading fonts:', fontError);
-		return null;
-	}
-
-	if (!fontsLoaded) {
-		return null; 
-	}
 
 	function renderSearchBar() {
 		return (
@@ -283,6 +251,7 @@ const Home = () => {
 								marginLeft: index == 0 ? SIZES.padding : SIZES.base,
 								marginRight: index == dummyData.categories.length - 1 ? SIZES.padding : 0
 							}}
+							onPress={() => navigation.navigate('CourseListing', { category: item })}
 						/>
 					)}
 				/>
@@ -298,32 +267,9 @@ const Home = () => {
 					marginTop: 30
 				}}
 			>
-			<FlatList
-				data={dummyData.courses_list_2}
-				listkey="PopularCourses"
-				scrollEnabled={false}
-				keyExtractor={item => `PopularCourses-${item.id}`}
-				contentContainerStyle={{
-					marginTop: SIZES.padding,
-					paddingHorizontal: SIZES.padding
-				}}
-				renderItem={({item, index}) => (
-					<VerticalCourseCard
-						course={item}
-						containerStyle={{
-							marginVertical: SIZES.padding,
-							marginTop: index == 0 ? SIZES.radius : SIZES.padding
-						}}
-					/>
-				)}
-				ItemSeparatorComponent={() => (
-					<LineDivier
-						lineStyle={{
-							backgroundColor: COLORS.gray20
-						}}
-					/>
-				)}
-			/>
+				<CourseListingView
+					data={dummyData.courses_list_2}
+				/>
 			</Section>
 		)
 	}
@@ -340,11 +286,11 @@ const Home = () => {
 			{/* Content */}
 			<ScrollView
 				contentContainerStyle={{
-					paddingBottom: 150
+					paddingBottom: 40
 				}}
 				showsVerticalScrollIndicator={false}
 			>
-			
+
 				{/* Search Bar */}
 				{renderSearchBar()}
 
@@ -354,7 +300,7 @@ const Home = () => {
 				{/* Courses */}
 				{renderCourses()}
 
-				<LineDivier 
+				<LineDivider 
 					lineStyle={{
 						marginHorizontal: SIZES.padding,
 						marginVertical: SIZES.padding

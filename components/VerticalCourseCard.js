@@ -54,7 +54,7 @@ const VerticalCourseCard = ({containerStyle, course}) => {
             <View
                 style={{
                     flex: 1,
-                    marginLeft: SIZES.base
+                    marginLeft: SIZES.padding
                 }}
             >
                 {/* Title */}
