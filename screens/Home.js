@@ -130,6 +130,8 @@ const Home = () => {
 				<IconButton
 					icon={icons.profile}
 					iconStyle={{
+						width: 28,
+						height: 28,
 						tintColor: COLORS.black
 					}}
 					onPress={() => navigation.navigate("Profile", {isSelfProfile: true})}

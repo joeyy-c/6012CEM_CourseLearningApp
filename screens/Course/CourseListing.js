@@ -62,7 +62,7 @@ const CourseListing = ({ route }) => {
                         ...FONTS.h1
                     }}
                 >
-                    {category?.title}
+                    {`Results for "` + category?.title + `"`}
                 </Text>
             </View>
         )

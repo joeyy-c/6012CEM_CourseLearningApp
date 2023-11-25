@@ -68,6 +68,7 @@ const Search = () => {
 						    height: 50
                         }}
                         returnKeyType="done"
+                        onSubmitEditing={() => navigation.navigate('CourseListing', { category: dummyData.categories[2] })}
 					/>
 				</View>
 			</View>

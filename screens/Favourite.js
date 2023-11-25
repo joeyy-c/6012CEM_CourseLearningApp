@@ -39,7 +39,6 @@ const Favourite = () => {
                     }}
                 />
 
-				{/* Greetings */}
 				<View style={{
 					flex: 1
 				}}>

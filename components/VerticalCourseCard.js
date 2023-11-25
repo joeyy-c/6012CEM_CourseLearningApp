@@ -82,12 +82,13 @@ const VerticalCourseCard = ({ containerStyle, course, showPrice, showRating, onP
                 <View
                     style={{
                         flexDirection: 'row',
-                        justifyContent: "space-between",
+                        // justifyContent: "space-between",
+                        justifyContent: "flex-end",
                         alignItems: 'center',
                         marginTop: SIZES.radius
                     }}
                 >
-                    {showPrice &&
+                    {/* {showPrice &&
                         <Text
                             style={{
                                 ...FONTS.h3,
@@ -96,7 +97,7 @@ const VerticalCourseCard = ({ containerStyle, course, showPrice, showRating, onP
                         >
                             RM {course.price.toFixed(2)}
                         </Text>
-                    }
+                    } */}
 
                     {showRating &&
                         <IconLabel

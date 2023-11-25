@@ -21,15 +21,18 @@ const expert = require("../assets/icons/expert.png")
 const eye = require("../assets/icons/eye.png")
 const eye_close = require("../assets/icons/eye_close.png")
 const facebook = require("../assets/icons/facebook.png")
+const faq = require("../assets/icons/faq.png")
 const favourite = require("../assets/icons/favourite.png")
 const favourite_outline = require("../assets/icons/favourite_outline.png")
 const filter = require("../assets/icons/filter.png")
 const google = require("../assets/icons/google.png")
 const heart = require("../assets/icons/heart.png")
+const help_centre = require("../assets/icons/help-center.png")
 const history = require("../assets/icons/history.png")
 const home = require("../assets/icons/home.png")
 const illustration = require("../assets/icons/illustration.png")
 const lock = require("../assets/icons/lock.png")
+const logout = require("../assets/icons/logout.png")
 const mail = require("../assets/icons/mail.png")
 const media = require("../assets/icons/media.png")
 const menu = require("../assets/icons/menu.png")
@@ -43,6 +46,7 @@ const padlock = require("../assets/icons/padlock.png")
 const password = require("../assets/icons/password.png")
 const play = require("../assets/icons/play.png")
 const play_1 = require("../assets/icons/play_1.png")
+const privacy = require("../assets/icons/privacy.png")
 const profile = require("../assets/icons/profile.png")
 const reminder = require("../assets/icons/reminder.png")
 const reply = require("../assets/icons/reply.png")
@@ -80,15 +84,18 @@ export default {
     eye,
     eye_close,
     facebook,
+    faq,
     favourite,
     favourite_outline,
     filter,
     google,
     heart,
+    help_centre,
     history,
     home,
     illustration,
     lock,
+    logout,
     mail,
     media,
     menu,
@@ -102,6 +109,7 @@ export default {
     password,
     play,
     play_1,
+    privacy,
     profile,
     reminder,
     reply,

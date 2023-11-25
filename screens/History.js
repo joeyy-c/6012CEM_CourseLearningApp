@@ -39,7 +39,6 @@ const History = () => {
                     }}
                 />
 
-				{/* Greetings */}
 				<View style={{
 					flex: 1
 				}}>

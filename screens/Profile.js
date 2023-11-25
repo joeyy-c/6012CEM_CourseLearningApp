@@ -39,7 +39,6 @@ const Profile = ({ route }) => {
                     }}
                 />
 
-				{/* Greetings */}
 				<View style={{
 					flex: 1
 				}}>
@@ -51,8 +50,11 @@ const Profile = ({ route }) => {
                     <IconButton
                         icon={icons.settings}
                         iconStyle={{
+                            width: 25,
+                            height: 25,
                             tintColor: COLORS.black
                         }}
+                        onPress={() => navigation.navigate("Settings")}
                     />
                 }
 			</View>

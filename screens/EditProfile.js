@@ -40,7 +40,6 @@ const EditProfile = () => {
                     }}
                 />
 
-				{/* Greetings */}
 				<View style={{
 					flex: 1
 				}}>

@@ -2,6 +2,7 @@ import Home from "./Home";
 import Search from "./Search";
 import History from "./History";
 import Favourite from "./Favourite";
+import Settings from "./Settings";
 
 // Auth
 import Register from "./Register";
@@ -19,6 +20,7 @@ export {
     Search,
     History,
     Favourite,
+    Settings,
     
     Register,
     Login,
