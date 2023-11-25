@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, Image, ImageBackground, TouchableOpacity } from "react-native";
+import { View, Text, ImageBackground, TouchableOpacity } from "react-native";
 import IconLabel from "./IconLabel";
+import IconButton from "./IconButton";
 import { SIZES, COLORS, FONTS, icons } from "../constants";
 
-const VerticalCourseCard = ({ containerStyle, course, onPress }) => {
+const VerticalCourseCard = ({ containerStyle, course, showPrice, showRating, onPress, showFavourite }) => {
     return (
         <TouchableOpacity
             style={{
@@ -86,32 +87,57 @@ const VerticalCourseCard = ({ containerStyle, course, onPress }) => {
                         marginTop: SIZES.radius
                     }}
                 >
-                    <Text
-                        style={{
-                            ...FONTS.h3,
-                            color: COLORS.primary
-                        }}
-                    >
-                        RM {course.price.toFixed(2)}
-                    </Text>
+                    {showPrice &&
+                        <Text
+                            style={{
+                                ...FONTS.h3,
+                                color: COLORS.primary
+                            }}
+                        >
+                            RM {course.price.toFixed(2)}
+                        </Text>
+                    }
 
-                    <IconLabel
-                        icon={icons.star}
-                        label={course.ratings}
-                        containerStyle={{
-                            marginRight: SIZES.base
-                        }}
-                        iconStyle={{
-                            width: 15,
-                            height: 15,
-                            tintColor: COLORS.primary2
-                        }}
-                        labelStyle={{
-                            marginLeft: 5,
-                            // color: COLORS.black,
-                            ...FONTS.body3
-                        }}
-                    />
+                    {showRating &&
+                        <IconLabel
+                            icon={icons.star}
+                            label={course.ratings}
+                            containerStyle={{
+                                marginRight: SIZES.base
+                            }}
+                            iconStyle={{
+                                width: 15,
+                                height: 15,
+                                tintColor: COLORS.primary2
+                            }}
+                            labelStyle={{
+                                marginLeft: 5,
+                                // color: COLORS.black,
+                                ...FONTS.body3
+                            }}
+                        />
+                    }
+
+                    {showFavourite &&
+                        <View
+                            style={{
+                                width: "100%",
+                                flexDirection: "row",
+                                justifyContent: "flex-end"
+                            }}
+                        >
+                            <IconButton 
+                                icon={course?.is_favourite ? icons.favourite : icons.favourite_outline}
+                                iconStyle={{
+                                    width: 22,
+                                    height: 22,
+                                    tintColor: course?.is_favourite ? null : COLORS.gray30,
+                                    paddingRight: SIZES.padding
+                                }}
+                            />
+                        </View>
+                    }
+                    
                 </View>
             </View>
         </TouchableOpacity>

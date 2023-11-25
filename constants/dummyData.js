@@ -52,7 +52,7 @@ const courses_list_2 = [
     {
         id: 0,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        views: "223k",
+        views: "243k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -63,7 +63,7 @@ const courses_list_2 = [
     {
         id: 1,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        views: "100k",
+        views: "117k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -74,7 +74,7 @@ const courses_list_2 = [
     {
         id: 2,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        views: "100k",
+        views: "192k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -96,7 +96,7 @@ const courses_list_2 = [
     {
         id: 4,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        views: "900k",
+        views: "928k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -154,7 +154,9 @@ const course_details = {
     instructor: {
         name: "CodeWithMe",
         title: "Full Stack Programmer",
-        follower_count: "1.2m"
+        courses_count: "16",
+        follower_count: "1.2m",
+        following_count: "386"
     },
     videos: [
         {

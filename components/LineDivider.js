@@ -8,7 +8,7 @@ const LineDivier = ({lineStyle}) => {
             style={{
                 height: 1,
                 // width: "100%",
-                backgroundColor: COLORS.gray20,
+                backgroundColor: COLORS.gray10,
                 ...lineStyle
             }}
         />

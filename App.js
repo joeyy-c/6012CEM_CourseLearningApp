@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 
-import { Home, Search, CourseListing, CourseDetails } from './screens';
+import { Home, Search, CourseListing, CourseDetails, Profile, History, Favourite } from './screens';
 
 
 const Stack = createStackNavigator();
@@ -44,6 +44,9 @@ const App = () => {
 		    <Stack.Screen name="Search" component={Search} options={{ headerShown: false }}/>
         <Stack.Screen name="CourseListing" component={CourseListing} options={{ headerShown: false }}/>
         <Stack.Screen name="CourseDetails" component={CourseDetails} options={{ headerShown: false }}/>
+		<Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
+		<Stack.Screen name="History" component={History} options={{ headerShown: false }}/>
+		<Stack.Screen name="Favourite" component={Favourite} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

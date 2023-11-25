@@ -1,11 +1,14 @@
 import React from "react";
-import { View, ScrollView, Text, Image, FlatList } from "react-native";
+import { View, ScrollView, Text, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 import { IconLabel, TextButton, VerticalCourseCard, LineDivider, CourseListingView, IconButton } from "../../../components";
 import { COLORS, FONTS, SIZES, images, icons, dummyData } from "../../../constants";
 
 
 const CourseChapters = () => {
+
+    const navigation = useNavigation();
 
     function renderHeader() {
         return (
@@ -68,22 +71,23 @@ const CourseChapters = () => {
                     </View>
 
                     <IconButton 
-                        icon={icons.heart_off}
+                        icon={icons.favourite_outline}
                         iconStyle={{
-                            width: 25,
-                            height: 25,
+                            width: 22,
+                            height: 22,
                             tintColor: COLORS.gray30
                         }}
                     />
                 </View>
 
                 {/* Instructor */}
-                <View
+                <TouchableOpacity
                     style={{
                         flexDirection: "row",
                         marginTop: SIZES.padding,
                         alignItems: "center"
                     }}
+                    onPress={() => navigation.navigate("Profile", {isSelfProfile: false})}
                 >
                     {/* Profile Picture */}
                     <Image 
@@ -134,7 +138,7 @@ const CourseChapters = () => {
                             ...FONTS.h3
                         }}
                     />
-                </View>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -219,6 +223,8 @@ const CourseChapters = () => {
                 </Text>
                 <CourseListingView
                     data={dummyData.courses_list_2}
+                    showPrice={true}
+                    showRating={true}
                 />
             </View>
         )

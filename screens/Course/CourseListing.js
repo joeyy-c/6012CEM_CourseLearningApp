@@ -96,6 +96,8 @@ const CourseListing = ({ route }) => {
             >
                 <CourseListingView
                     data={dummyData.courses_list_2}
+                    showPrice={true}
+                    showRating={true}
                 />
             </ScrollView>
         )

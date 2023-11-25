@@ -7,7 +7,7 @@ import { SIZES, COLORS } from '../constants';
 import VerticalCourseCard from "./VerticalCourseCard";
 import LineDivider from "./LineDivider";
 
-const CourseListingView = ({data}) => {
+const CourseListingView = ({data, showPrice, showRating, showFavourite}) => {
   const navigation = useNavigation();
 
   return (
@@ -27,6 +27,9 @@ const CourseListingView = ({data}) => {
               marginVertical: SIZES.radius,
               marginTop: index == 0 ? SIZES.radius : SIZES.padding
             }}
+            showPrice={showPrice}
+            showRating={showRating}
+            showFavourite={showFavourite}
             onPress={() => navigation.navigate("CourseDetails", {selectedCourse: item})}
           />
         )}

@@ -1,6 +1,6 @@
 import React from 'react';
 // import * as Font from 'expo-font';
-import { View, Text, ImageBackground, Image, ScrollView, _View, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, ImageBackground, Image, ScrollView, FlatList, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { IconButton, TextButton, LineDivider, HorizontalCourseCard, CategoryCard, CourseListingView } from "../components";
@@ -132,6 +132,7 @@ const Home = () => {
 					iconStyle={{
 						tintColor: COLORS.black
 					}}
+					onPress={() => navigation.navigate("Profile", {isSelfProfile: true})}
 				/>
 			</View>
 		)
@@ -276,6 +277,8 @@ const Home = () => {
 			>
 				<CourseListingView
 					data={dummyData.courses_list_2}
+					showPrice={true}
+                    showRating={true}
 				/>
 			</Section>
 		)

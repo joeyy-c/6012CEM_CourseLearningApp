@@ -14,6 +14,7 @@ const comment = require("../assets/icons/comment.png")
 const completed = require("../assets/icons/completed.png")
 const download = require("../assets/icons/download.png")
 const drawing = require("../assets/icons/drawing.png")
+const edit = require("../assets/icons/edit.png")
 const education = require("../assets/icons/education.png")
 const email = require("../assets/icons/email.png")
 const eye = require("../assets/icons/eye.png")
@@ -24,7 +25,7 @@ const favourite_outline = require("../assets/icons/favourite_outline.png")
 const filter = require("../assets/icons/filter.png")
 const google = require("../assets/icons/google.png")
 const heart = require("../assets/icons/heart.png")
-const heart_off = require("../assets/icons/heart_off.png")
+const history = require("../assets/icons/history.png")
 const home = require("../assets/icons/home.png")
 const illustration = require("../assets/icons/illustration.png")
 const lock = require("../assets/icons/lock.png")
@@ -45,6 +46,7 @@ const reply = require("../assets/icons/reply.png")
 const right_arrow = require("../assets/icons/right_arrow.png")
 const search = require("../assets/icons/search.png")
 const send = require("../assets/icons/send.png")
+const settings = require("../assets/icons/settings.png")
 const staff_pick = require("../assets/icons/staff_pick.png")
 const star = require("../assets/icons/star.png")
 const star_1 = require("../assets/icons/star_1.png")
@@ -68,6 +70,7 @@ export default {
     completed,
     download,
     drawing,
+    edit,
     education,
     email,
     eye,
@@ -78,7 +81,7 @@ export default {
     filter,
     google,
     heart,
-    heart_off,
+    history,
     home,
     illustration,
     lock,
@@ -99,6 +102,7 @@ export default {
     right_arrow,
     search,
     send,
+    settings,
     staff_pick,
     star,
     star_1,
