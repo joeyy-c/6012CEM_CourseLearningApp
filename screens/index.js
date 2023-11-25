@@ -4,9 +4,10 @@ import History from "./History";
 import Favourite from "./Favourite";
 
 // Auth
-import Profile from "./Profile";
 import Register from "./Register";
 import Login from "./Login";
+import Profile from "./Profile";
+import EditProfile from "./EditProfile";
 
 // Course
 import CourseListing from "./Course/CourseListing";
@@ -19,9 +20,10 @@ export {
     History,
     Favourite,
     
-    Profile,
     Register,
     Login,
+    Profile,
+    EditProfile,
 
     CourseListing,
     CourseDetails

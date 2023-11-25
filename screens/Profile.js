@@ -122,6 +122,7 @@ const Profile = ({ route }) => {
                                 height: 16,
                                 tintColor: COLORS.gray30
                             }}
+                            onPress={() => navigation.navigate("EditProfile")}
                         />
                     </View>
                 ) : (

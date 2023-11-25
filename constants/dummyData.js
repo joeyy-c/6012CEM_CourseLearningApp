@@ -153,6 +153,7 @@ const course_details = {
     duration: "2h 30m",
     instructor: {
         name: "CodeWithMe",
+        email: "codewithme@gmail.com",
         title: "Full Stack Programmer",
         courses_count: "16",
         follower_count: "1.2m",
@@ -238,7 +239,7 @@ const course_details = {
     discussions: [
         {
             id: 0,
-            profile: require("../assets/images/profile.png"),
+            profile: require("../assets/images/contributor_3.png"),
             name: "CodeWithMe",
             no_of_comments: "11",
             no_of_likes: "72",
@@ -286,7 +287,7 @@ const course_details = {
         },
         {
             id: 1,
-            profile: require("../assets/images/profile.png"),
+            profile: require("../assets/images/contributor_3.png"),
             name: "CodeWithMe",
             no_of_comments: "21",
             no_of_likes: "372",
