@@ -8,7 +8,6 @@ import { COLORS, FONTS, SIZES, icons, dummyData } from "../../constants";
 const CourseListing = ({ route }) => {
     const { category } = route.params;
     const navigation = useNavigation();
-    console.log(category);
 
     function backHandler() {
         navigation.goBack();

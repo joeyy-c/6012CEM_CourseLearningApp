@@ -1,5 +1,6 @@
 import IconButton from "./IconButton";
 import IconLabel from "./IconLabel";
+import IconLabelButton from "./IconLabelButton";
 import LineDivider from "./LineDivider";
 import TextButton from "./TextButton";
 import HorizontalCourseCard from "./HorizontalCourseCard";
@@ -10,6 +11,7 @@ import CourseListingView from "./CourseListingView";
 export {
     IconButton,
     IconLabel,
+    IconLabelButton,
     LineDivider,
     TextButton,
     HorizontalCourseCard,

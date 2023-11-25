@@ -1,21 +1,20 @@
 import React from "react";
-import {
-    View,
-    Text,
-    Image,
-    TouchableOpacity
-} from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import IconLabel from "./IconLabel";
 import { SIZES, COLORS, FONTS, icons } from "../constants";
 
 const VerticalCourseCard = ({ containerStyle, course }) => {
+    const navigation = useNavigation();
+
     return (
         <TouchableOpacity
             style={{
                 width: 270,
                 ...containerStyle
             }}
+            onPress={() => navigation.navigate('CourseDetails', {selectedCourse: 0})}
         >
             {/* Thumbnail */}
             <Image 

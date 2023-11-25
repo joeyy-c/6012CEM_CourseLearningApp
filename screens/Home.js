@@ -25,21 +25,24 @@ const Section = ({containerStyle, title, onPress, children}) => {
 				<Text
 					style={{
 						flex: 1,
-						...FONTS.h2
+						...FONTS.h2,
+						paddingBottom: SIZES.base
 					}}
 				>
 					{title}
 				</Text>
 
-				<TextButton
-					contentContainerStyle={{
-						width: 80,
-						borderRadius: 30,
-						backgroundColor: COLORS.primary
-					}}
-					label="See All"
-					onPress={onPress}
-				/>
+				{onPress &&
+					<TextButton
+						contentContainerStyle={{
+							width: 80,
+							borderRadius: 30,
+							backgroundColor: COLORS.primary
+						}}
+						label="See All"
+						onPress={onPress}
+					/>
+				}
 			</View>
 
 			{children}
@@ -201,6 +204,7 @@ const Home = () => {
 					labelStyle={{
 						color: COLORS.black
 					}}
+					onPress={() => navigation.navigate('CourseDetails', {selectedCourse: 0})}
 				/>
 			</ImageBackground>
 		)
@@ -231,13 +235,16 @@ const Home = () => {
 	}
 
 	function renderCategories() {
+		const categories = dummyData.categories.slice(0, 5);
+
 		return (
 			<Section
 				title="Categories"
+				onPress={() => navigation.navigate('Search')}
 			>
 				<FlatList
 					horizontal
-					data={dummyData.categories}
+					data={categories}
 					listKey="Categories"
 					keyExtractor={item => `Categories-${item.id}`}
 					showsHorizontalScrollIndicator={false}
@@ -249,7 +256,7 @@ const Home = () => {
 							category={item}
 							containerStyle={{
 								marginLeft: index == 0 ? SIZES.padding : SIZES.base,
-								marginRight: index == dummyData.categories.length - 1 ? SIZES.padding : 0
+								marginRight: index == categories.length - 1 ? SIZES.padding : 0
 							}}
 							onPress={() => navigation.navigate('CourseListing', { category: item })}
 						/>

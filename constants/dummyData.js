@@ -1,3 +1,5 @@
+const sample_video = require("../assets/videos/sample_video.mp4");
+
 const categories = [
     {
         id: 0,
@@ -50,6 +52,7 @@ const courses_list_2 = [
     {
         id: 0,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+        views: "223k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -60,6 +63,7 @@ const courses_list_2 = [
     {
         id: 1,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+        views: "100k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -70,6 +74,7 @@ const courses_list_2 = [
     {
         id: 2,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+        views: "100k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -80,6 +85,7 @@ const courses_list_2 = [
     {
         id: 3,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+        views: "1.1m",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -90,6 +96,7 @@ const courses_list_2 = [
     {
         id: 4,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+        views: "900k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -100,6 +107,7 @@ const courses_list_2 = [
     {
         id: 5,
         title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+        views: "667k",
         duration: "2h 30m",
         instructor: "James Morris",
         ratings: 4.9,
@@ -139,11 +147,14 @@ const top_searches = [
 const course_details = {
     id: 0,
     title: "The Ultimate Ui/Ux Course Beginner to Advanced",
+    views: "364, 881",
+    date: "25th Aug 2023",
     number_of_students: "33.5k Students",
     duration: "2h 30m",
     instructor: {
-        name: "ByProgrammers",
-        title: "Full Stack Programmer"
+        name: "CodeWithMe",
+        title: "Full Stack Programmer",
+        follower_count: "1.2m"
     },
     videos: [
         {
@@ -160,7 +171,7 @@ const course_details = {
             title: "2. User Interface",
             duration: "1:15:00",
             size: "200 MB",
-            progress: "100%",
+            progress: "60%",
             is_playing: true,
             is_complete: false,
             is_lock: false,
@@ -177,47 +188,47 @@ const course_details = {
             is_downloaded: false,
         }
     ],
-    students: [
+    contributors: [
         {
             id: 0,
-            name: "Student 1",
-            thumbnail: require("../assets/images/student_1.png")
+            name: "Contributor 1",
+            thumbnail: require("../assets/images/contributor_1.png")
         },
         {
             id: 1,
-            name: "Student 2",
-            thumbnail: require("../assets/images/student_2.png")
+            name: "Contributor 2",
+            thumbnail: require("../assets/images/contributor_2.png")
         },
         {
             id: 2,
-            name: "Student 3",
-            thumbnail: require("../assets/images/student_3.png")
+            name: "Contributor 3",
+            thumbnail: require("../assets/images/contributor_3.png")
         },
         {
             id: 3,
-            name: "Student 3",
-            thumbnail: require("../assets/images/student_3.png")
+            name: "Contributor 3",
+            thumbnail: require("../assets/images/contributor_1.png")
         }
     ],
     files: [
         {
             id: 0,
             name: "UI Fundamentals",
-            author: "Shared by ByProgrammers",
+            author: "CodeWithMe",
             upload_date: "13th Sep 2021",
             thumbnail: require("../assets/images/pdf.png")
         },
         {
             id: 1,
             name: "UX Checklist",
-            author: "Shared by ByProgrammers",
+            author: "CodeWithMe",
             upload_date: "11th Sep 2021",
             thumbnail: require("../assets/images/doc.png")
         },
         {
             id: 2,
             name: "Sketch File",
-            author: "Shared by ByProgrammers",
+            author: "CodeWithMe",
             upload_date: "7th Sep 2021",
             thumbnail: require("../assets/images/sketch.png")
         }
@@ -226,37 +237,46 @@ const course_details = {
         {
             id: 0,
             profile: require("../assets/images/profile.png"),
-            name: "ByProgrammers",
-            no_of_comments: "11 comments",
-            no_of_likes: "72 likes",
+            name: "CodeWithMe",
+            no_of_comments: "11",
+            no_of_likes: "72",
+            liked: 0,
             posted_on: "5 days ago",
             comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             replies: [
                 {
                     id: 0,
-                    profile: require("../assets/images/student_1.png"),
-                    name: "ByProgrammers",
+                    profile: require("../assets/images/contributor_1.png"),
+                    name: "CodeWithMe",
+                    no_of_likes: "3",
+                    liked: 1,
                     posted_on: "4 days ago",
                     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 1,
-                    profile: require("../assets/images/student_1.png"),
-                    name: "ByProgrammers",
+                    profile: require("../assets/images/contributor_1.png"),
+                    name: "CodeWithMe",
+                    no_of_likes: "1",
+                    liked: 0,
                     posted_on: "4 days ago",
                     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 2,
-                    profile: require("../assets/images/student_1.png"),
-                    name: "ByProgrammers",
+                    profile: require("../assets/images/contributor_1.png"),
+                    name: "CodeWithMe",
+                    no_of_likes: "2",
+                    liked: 1,
                     posted_on: "4 days ago",
                     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 3,
-                    profile: require("../assets/images/student_1.png"),
-                    name: "ByProgrammers",
+                    profile: require("../assets/images/contributor_1.png"),
+                    name: "CodeWithMe",
+                    no_of_likes: "",
+                    liked: 0,
                     posted_on: "4 days ago",
                     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
@@ -265,30 +285,37 @@ const course_details = {
         {
             id: 1,
             profile: require("../assets/images/profile.png"),
-            name: "ByProgrammers",
-            no_of_comments: "21 comments",
-            no_of_likes: "372 likes",
+            name: "CodeWithMe",
+            no_of_comments: "21",
+            no_of_likes: "372",
+            liked: 1,
             posted_on: "14 days ago",
             comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             replies: [
                 {
                     id: 0,
-                    profile: require("../assets/images/student_1.png"),
-                    name: "ByProgrammers",
+                    profile: require("../assets/images/contributor_1.png"),
+                    name: "CodeWithMe",
+                    no_of_likes: "6",
+                    liked: 1,
                     posted_on: "7 days ago",
                     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 1,
-                    profile: require("../assets/images/student_1.png"),
-                    name: "ByProgrammers",
+                    profile: require("../assets/images/contributor_1.png"),
+                    name: "CodeWithMe",
+                    no_of_likes: "2",
+                    liked: 0,
                     posted_on: "7 days ago",
                     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 2,
-                    profile: require("../assets/images/student_1.png"),
-                    name: "ByProgrammers",
+                    profile: require("../assets/images/contributor_1.png"),
+                    name: "CodeWithMe",
+                    no_of_likes: "",
+                    liked: 0,
                     posted_on: "7 days ago",
                     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
@@ -303,21 +330,21 @@ const notificationByDays = [
         data: [
             {
                 id: 1,
-                avatar: require("../assets/images/student_1.png"),
+                avatar: require("../assets/images/contributor_1.png"),
                 name: "Admin",
                 created_at: "2h 47m ago",
                 message: "Asked to join online courses regarding professional web designing."
             },
             {
                 id: 2,
-                avatar: require("../assets/images/student_2.png"),
+                avatar: require("../assets/images/contributor_2.png"),
                 name: "Customer Care",
                 created_at: "3h 02m ago",
                 message: "Your 50% discount code is: ON50DIS. Apply on checkout."
             },
             {
                 id: 3,
-                avatar: require("../assets/images/student_3.png"),
+                avatar: require("../assets/images/contributor_3.png"),
                 name: "Lilian Ellis",
                 created_at: "4h 32m ago",
                 message: "Asked assiged you to watch professional videography course."
@@ -330,14 +357,14 @@ const notificationByDays = [
         data: [
             {
                 id: 4,
-                avatar: require("../assets/images/student_1.png"),
+                avatar: require("../assets/images/contributor_1.png"),
                 name: "Admin",
                 created_at: "16h 47m ago",
                 message: "You just signed in from another device check inbox for more details."
             },
             {
                 id: 5,
-                avatar: require("../assets/images/student_2.png"),
+                avatar: require("../assets/images/contributor_2.png"),
                 name: "Customer Care",
                 created_at: "20h 02m ago",
                 message: "Your 50% discount code is: ON50DIS. Apply on checkout."
@@ -348,6 +375,7 @@ const notificationByDays = [
 ]
 
 export default {
+    sample_video,
     categories,
     courses_list_1,
     courses_list_2,

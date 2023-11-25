@@ -28,6 +28,7 @@ export const COLORS = {
     transparent: 'transparent',
     transparentWhite1: "rgba(255, 255, 255, 0.1)",
     transparentBlack1: "rgba(0, 0, 0, 0.1)",
+    transparentBlack4: "rgba(0, 0, 0, 0.4)",
     transparentBlack7: "rgba(0, 0, 0, 0.7)"
 };
 export const SIZES = {
