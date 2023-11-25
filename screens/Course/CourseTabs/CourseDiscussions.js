@@ -125,7 +125,7 @@ const CourseDiscussions = () => {
                                 >
                                     {/* Like */}
                                     <IconLabelButton 
-                                        icon={item?.liked ? icons.heart : icons.heart_off}
+                                        icon={item?.liked ? icons.favourite : icons.favourite_outline}
                                         label={item?.no_of_likes}
                                         containerStyle={{
                                             paddingLeft: 0
@@ -177,7 +177,7 @@ const CourseDiscussions = () => {
 
                                                     {/* Like */}
                                                     <IconLabelButton 
-                                                        icon={item?.liked ? icons.heart : icons.heart_off}
+                                                        icon={item?.liked ? icons.favourite : icons.favourite_outline}
                                                         label={item?.no_of_likes}
                                                         containerStyle={{
                                                             paddingLeft: 0

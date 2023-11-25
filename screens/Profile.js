@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, ImageBackground, Image, ScrollView, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ScrollView, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { IconButton, IconLabel, TextButton, LineDivider, HorizontalCourseCard, CategoryCard, CourseListingView, IconLabelButton } from "../components";
+import { IconButton, IconLabel, TextButton, HorizontalCourseCard, CourseListingView } from "../components";
 import { COLORS, FONTS, SIZES, icons, images, dummyData } from '../constants';
 
 
@@ -89,7 +89,7 @@ const Profile = ({ route }) => {
                 >
                     <Text
                         style={{
-                            ...FONTS.h2
+                            ...FONTS.h2,
                         }}
                     >
                         {dummyData?.course_details?.instructor?.name}
@@ -154,7 +154,7 @@ const Profile = ({ route }) => {
                     marginHorizontal: SIZES.padding,
                     marginTop: SIZES.padding,
                     borderRadius: SIZES.radius,
-                    backgroundColor: COLORS.additionalColor9,
+                    backgroundColor: COLORS.additionalColor11,
                 }}
             >
                 <View
@@ -165,7 +165,8 @@ const Profile = ({ route }) => {
                 >
                     <Text
                        style={{
-                        ...FONTS.h1
+                        ...FONTS.h1,
+                        color: COLORS.primary
                        }} 
                     >
                         {dummyData?.course_details?.instructor?.courses_count}
@@ -174,6 +175,7 @@ const Profile = ({ route }) => {
                     <Text
                         style={{
                             ...FONTS.body3,
+                            color: COLORS.primary
                         }}
                     >
                        { isSelfProfile ? 'Courses Completed' : 'Courses Posted' }
@@ -188,7 +190,8 @@ const Profile = ({ route }) => {
                 >
                     <Text
                        style={{
-                        ...FONTS.h1
+                        ...FONTS.h1,
+                        color: COLORS.primary
                        }} 
                     >
                         {dummyData?.course_details?.instructor?.following_count}
@@ -196,7 +199,8 @@ const Profile = ({ route }) => {
 
                     <Text
                         style={{
-                            ...FONTS.body3
+                            ...FONTS.body3,
+                            color: COLORS.primary
                         }}
                     >
                        { isSelfProfile ? 'Following' : 'Follower' }
@@ -211,7 +215,7 @@ const Profile = ({ route }) => {
 		return (
             <View
                 style={{
-                    paddingTop: 40,
+                    paddingTop: 50,
                 }}
             >
 
@@ -228,9 +232,11 @@ const Profile = ({ route }) => {
                         iconStyle={{
                             width: 22,
                             height: 22,
+                            tintColor: COLORS.black
                         }}
                         labelStyle={{
                             ...FONTS.h2,
+                            color: COLORS.black
                         }}
                     />
 

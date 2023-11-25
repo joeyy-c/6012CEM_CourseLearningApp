@@ -17,6 +17,7 @@ const drawing = require("../assets/icons/drawing.png")
 const edit = require("../assets/icons/edit.png")
 const education = require("../assets/icons/education.png")
 const email = require("../assets/icons/email.png")
+const expert = require("../assets/icons/expert.png")
 const eye = require("../assets/icons/eye.png")
 const eye_close = require("../assets/icons/eye_close.png")
 const facebook = require("../assets/icons/facebook.png")
@@ -29,6 +30,7 @@ const history = require("../assets/icons/history.png")
 const home = require("../assets/icons/home.png")
 const illustration = require("../assets/icons/illustration.png")
 const lock = require("../assets/icons/lock.png")
+const mail = require("../assets/icons/mail.png")
 const media = require("../assets/icons/media.png")
 const menu = require("../assets/icons/menu.png")
 const mobile = require("../assets/icons/mobile.png")
@@ -37,6 +39,7 @@ const networking = require("../assets/icons/networking.png")
 const new_icon = require("../assets/icons/new.png")
 const notification = require("../assets/icons/notification.png")
 const original = require("../assets/icons/original.png")
+const padlock = require("../assets/icons/padlock.png")
 const password = require("../assets/icons/password.png")
 const play = require("../assets/icons/play.png")
 const play_1 = require("../assets/icons/play_1.png")
@@ -73,6 +76,7 @@ export default {
     edit,
     education,
     email,
+    expert,
     eye,
     eye_close,
     facebook,
@@ -85,6 +89,7 @@ export default {
     home,
     illustration,
     lock,
+    mail,
     media,
     menu,
     mobile,
@@ -93,6 +98,7 @@ export default {
     new_icon,
     notification,
     original,
+    padlock,
     password,
     play,
     play_1,
