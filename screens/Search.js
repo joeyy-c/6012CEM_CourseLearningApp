@@ -1,10 +1,79 @@
 import React from "react";
-import { View, Text } from "react-native";
-import { SIZES, dummyData } from "../constants";
+import { View, Text, Image, ScrollView, TouchableOpacity, TextInput } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import { CategoryCard } from "../components";
+import { useNavigation } from '@react-navigation/native';
+
+import { FONTS, SIZES, COLORS, icons, dummyData } from "../constants";
+import { CategoryCard, IconButton } from "../components";
 
 const Search = () => {
+    const navigation = useNavigation();
+
+    function backHandler() {
+        navigation.goBack();
+    }
+
+	function renderSearchBar() {
+		return (
+			<View 
+				style={{
+					flexDirection: 'row',
+					marginTop: 20,
+					marginBottom: 10,
+					paddingHorizontal: SIZES.padding,
+					alignItems: 'center'
+				}}
+			>
+                <IconButton
+                    icon={icons.back}
+                    iconStyle={{
+                        tintColor: COLORS.black,
+                        width: 18
+                    }}
+                    containerStyle={{
+                        alignItems: "center",
+                        justifyContent: "center",
+                        paddingRight: SIZES.radius
+                    }}
+                    onPress={() => {
+                        backHandler()
+                    }}
+                />
+
+				<View
+					style={{
+						flex: 1,
+						flexDirection: 'row',
+						alignItems: 'center',
+						borderRadius: SIZES.radius,
+						paddingHorizontal: SIZES.padding,
+						backgroundColor: COLORS.additionalColor9,
+						...FONTS.body3
+					}}
+				>
+					<Image 
+						source={icons.search}
+						style={{
+							width: 15,
+							height: 15,
+							tintColor: COLORS.gray40,
+							marginRight: SIZES.radius
+						}}
+					/>
+					
+					<TextInput 
+						placeholder="Search ..."
+                        style={{
+                            width: "100%",
+						    height: 50
+                        }}
+                        returnKeyType="done"
+                        onSubmitEditing={() => navigation.navigate('CourseListing', { category: dummyData.categories[2] })}
+					/>
+				</View>
+			</View>
+		)
+	}
 
     function renderBrowseCategories() {
         return (
@@ -40,6 +109,7 @@ const Search = () => {
                                 marginTop: SIZES.radius,
                                 marginLeft: (index + 1) % 2 == 0 ? SIZES.radius : SIZES.padding
                             }}
+                            onPress={() => navigation.navigate('CourseListing', { category: item })}
                         />
                     )}
                 />
@@ -48,13 +118,18 @@ const Search = () => {
     }
 
     return (
-        <View>
-            <ScrollView
-                showsVerticalScrollIndicator={false}
-            >
-                {/* Browse Categories */}
-                {renderBrowseCategories()}
-            </ScrollView>
+        <View
+            style={{
+                flex: 1,
+                paddingTop: 50,
+                backgroundColor: COLORS.white
+            }}
+        >
+            {/* Search Bar */}
+            {renderSearchBar()}
+
+            {/* Browse Categories */}
+            {renderBrowseCategories()}
         </View>
     )
 }
