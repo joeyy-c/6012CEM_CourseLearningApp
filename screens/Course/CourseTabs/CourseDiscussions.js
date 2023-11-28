@@ -81,17 +81,17 @@ const CourseDiscussions = () => {
     const [footerPosition, setFooterPosition] = React.useState(0);
     React.useEffect(() => {
         // Listen to the keyboard
-        const showSubscription = Keyboard.addListener("keyboardWillShow", (e) => {
+        const showKeyboard = Keyboard.addListener("keyboardWillShow", (e) => {
             setFooterPosition(e.endCoordinates.height - 1)
         })
 
-        const hideSubscription = Keyboard.addListener("keyboardWillHide", (e) => {
+        const hideKeyboard = Keyboard.addListener("keyboardWillHide", (e) => {
             setFooterPosition(0)
         })
 
         return () => {
-            showSubscription.remove()
-            hideSubscription.remove()
+            showKeyboard.remove()
+            hideKeyboard.remove()
         }
     }, [])
 
@@ -143,8 +143,8 @@ const CourseDiscussions = () => {
 
                                     {/* Comment */}
                                     <IconLabelButton 
-                                        icon={icons.comment}
-                                        label={item?.no_of_comments}
+                                        icon={icons.reply}
+                                        label="Reply"
                                         iconStyle={{
                                             width: 16,
                                             height: 16,

@@ -27,6 +27,7 @@ const VerticalCourseCard = ({ containerStyle, course, showPrice, showRating, onP
                 }}
             >
 
+                {/* Course Duration */}
                 <View
                     style={{
                         position: 'absolute',

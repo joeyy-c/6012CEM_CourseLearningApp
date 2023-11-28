@@ -120,6 +120,7 @@ const Search = () => {
     return (
         <View
             style={{
+                flex: 1,
                 paddingTop: 50,
                 backgroundColor: COLORS.white
             }}

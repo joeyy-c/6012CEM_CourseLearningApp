@@ -127,12 +127,16 @@ const Settings = () => {
                 icon={icons.logout}
                 label={'Logout'}
                 containerStyle={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
                     borderWidth: 1,
                     borderColor: COLORS.secondary,
-                    borderRadius: SIZES.radius,
+                    borderRadius: 50,
                     margin: SIZES.padding,
                     paddingVertical: 18,
-                    bottom: 0
+                    marginBottom: 100,
                 }}
                 iconStyle={{
                     width: 16,

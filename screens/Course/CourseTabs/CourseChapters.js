@@ -166,14 +166,26 @@ const CourseChapters = () => {
                                 }}
                             >
                                 {/* Icon */}
-                                <Image
-                                    source={icons.play_1}
+                                <View
                                     style={{
                                         width: 40,
                                         height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: 25,
+                                        backgroundColor: COLORS.primary,
                                         opacity: item?.is_playing ? 1 : 0.2
                                     }}
-                                />
+                                >
+                                    <Image
+                                        source={icons.play}
+                                        resizeMode="contain"
+                                        style={{
+                                            width: 10,
+                                            height: 10
+                                        }}
+                                    />
+                                </View>
 
                                 {/* Title & Duration */}
                                 <View
@@ -224,7 +236,7 @@ const CourseChapters = () => {
                 <CourseListingView
                     data={dummyData.courses_list_2}
                     showPrice={true}
-                    showRating={true}
+                    // showRating={true}
                 />
             </View>
         )

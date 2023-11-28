@@ -280,7 +280,7 @@ const Home = () => {
 				<CourseListingView
 					data={dummyData.courses_list_2}
 					showPrice={true}
-                    showRating={true}
+                    // showRating={true}
 				/>
 			</Section>
 		)

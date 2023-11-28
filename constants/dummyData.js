@@ -240,7 +240,7 @@ const course_details = {
         {
             id: 0,
             profile: require("../assets/images/contributor_3.png"),
-            name: "CodeWithMe",
+            name: "DeveloperChristine",
             no_of_comments: "11",
             no_of_likes: "72",
             liked: 0,
@@ -254,16 +254,16 @@ const course_details = {
                     no_of_likes: "3",
                     liked: 1,
                     posted_on: "4 days ago",
-                    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    comment: "@DeveloperChristine  Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 1,
-                    profile: require("../assets/images/contributor_1.png"),
+                    profile: require("../assets/images/contributor_2.png"),
                     name: "CodeWithMe",
                     no_of_likes: "1",
                     liked: 0,
                     posted_on: "4 days ago",
-                    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    comment: "@CodeWithMe  Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 2,
@@ -272,7 +272,7 @@ const course_details = {
                     no_of_likes: "2",
                     liked: 1,
                     posted_on: "4 days ago",
-                    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    comment: "@DeveloperChristine  Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
                 {
                     id: 3,
@@ -281,7 +281,7 @@ const course_details = {
                     no_of_likes: "",
                     liked: 0,
                     posted_on: "4 days ago",
-                    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    comment: "@DeveloperChristine  Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 },
             ]
         },
